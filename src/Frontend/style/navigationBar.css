@@ -1,4 +1,4 @@
-.navigationBar-container{
+.navigationBar-container {
     height: 8rem;
     width: 100%;
     box-sizing: border-box;
@@ -9,17 +9,56 @@
     justify-content: center;
     gap: 1rem;
 }
-.navigation-title{
+
+.navigation-title {
     height: 100%;
     width: 20%;
-    background-color: white;
+    gap: 0.3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    justify-content: center;
 }
-.navigation-components{
+
+.navigation-title img {
+    width: 30%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navigation-components {
     height: 100%;
     width: 50%;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
 }
-.about-buttons{
+
+.nav {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav::before {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust as needed */
+    left: 0;
+    width: 0;
+    height: 3px; /* Adjust as needed */
+    background-color: white; /* Adjust as needed */
+    transition: width 0.3s ease;
+}
+
+.nav:hover::before {
+    width: 100%;
+}
+
+.about-buttons {
     height: 100%;
     width: 30%;
     background-color: aqua;
