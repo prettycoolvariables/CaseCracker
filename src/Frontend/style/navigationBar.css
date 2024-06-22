@@ -59,7 +59,20 @@
 }
 
 .about-buttons {
+    gap: 2rem;
     height: 100%;
     width: 30%;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.about-buttons input[type="button"]{
+    color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    height: 2.5rem;
+    width: 50%;
+    background-color:#DD761C ;
 }

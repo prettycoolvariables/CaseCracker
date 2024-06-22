@@ -1,5 +1,9 @@
+import { CiLinkedin } from "react-icons/ci";
+import { FaYoutube } from "react-icons/fa";
+import { CiTwitter } from "react-icons/ci";
+
 import "../style/navigationBar.css"
-import title from "../assets/navbarimage.png"
+import title from "../assets/navbarimg.png"
 const NavigationBar = () => {
     return ( 
         <div className="navigationBar-container">
@@ -15,7 +19,10 @@ const NavigationBar = () => {
                 <span className="nav">Contact</span>
             </div>
             <div className="about-buttons">
-
+                <CiLinkedin color="white" size={30}/>
+                <FaYoutube color="white" size={30}/>
+                <CiTwitter color="white" size={30}/>
+                <input type="button" value="Free Consultation   " />
             </div>
         </div>
      );

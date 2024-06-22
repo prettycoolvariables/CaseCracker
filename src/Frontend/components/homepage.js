@@ -1,6 +1,7 @@
 import { MdArrowOutward } from "react-icons/md";
 import { CgInfo } from "react-icons/cg";
 import justice from "../assets/justice (2).png"
+import judge from "../assets/judge.png"
 import "../style/homepage.css"
 const Home = () => {
     return ( 
@@ -24,7 +25,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="image-container">
-                <img src={justice} alt="" />
+                <img src={judge} alt="" />
             </div>
         </div>
      );
