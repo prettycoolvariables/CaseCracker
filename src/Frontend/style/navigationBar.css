@@ -1,0 +1,26 @@
+.navigationBar-container{
+    height: 8rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid 1px white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.navigation-title{
+    height: 100%;
+    width: 20%;
+    background-color: white;
+}
+.navigation-components{
+    height: 100%;
+    width: 50%;
+    background-color: red;
+}
+.about-buttons{
+    height: 100%;
+    width: 30%;
+    background-color: aqua;
+}
