@@ -45,9 +45,9 @@ def get_vector_store(text_chunks):
 
 def get_conversation_chain(vector_store):
     # Load Hugging Face model and tokenizer directly
-    model_name = "google/flan-t5-xxl"
+    model_name = "intfloat/e5-mistral-7b-instruct"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name, device_map="auto")
     question_answerer = pipeline("text2text-generation", model=model, tokenizer=tokenizer)
 
     memory = ConversationBufferMemory(memory_key='chat_history', return_messages=True)
