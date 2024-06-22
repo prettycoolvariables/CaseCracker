@@ -58,7 +58,8 @@
     align-items: center;
     justify-content: center;
     height: 2.5rem;
-    padding: 0.3rem;
+    width: 12rem;
+    padding: 0.4rem;
     box-sizing: border-box;
     width: auto;
     background-color: white;
@@ -67,8 +68,8 @@
 }
 .secondButton input[type="button"]{
     outline: none;
+    width: 8rem;
     border: none;
-
 }
 .image-container{
     width: 50%;
@@ -80,5 +81,5 @@
 .image-container img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }

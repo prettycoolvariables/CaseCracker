@@ -16,7 +16,7 @@ const Home = () => {
                 <div className="button-container">
                     <div className="firstButton">
                         <input type="button" value="Get Free Consultation" />
-                        <MdArrowOutward />
+                        <MdArrowOutward size={15}/>
                     </div>
                     <div className="secondButton">
                         <input className="secondButton" type="button" value="Practise Area" />
