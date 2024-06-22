@@ -1,0 +1,64 @@
+.ai-container{
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 12rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: #3572EF;
+    color: white;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+.ai-container.clicked{
+    margin-bottom: 12rem;
+    position: absolute;
+    height: 40rem;
+    width: 45rem;
+    opacity: 1;
+    z-index: 1000;
+}
+.ai-chat-box{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ai-chat-box-header{
+    box-sizing: border-box;
+    padding: 0.8rem;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 20px 20px 0 0;
+}
+.ai-chat-box-screen{
+    height: 88%;
+    width: 100%;
+}
+.ai-chat-box-inputs{
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    height: 9%;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ai-chat-box-inputs input[type="text"]{
+    width: 100%;
+    padding: 0.4rem;
+    height: 60%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}

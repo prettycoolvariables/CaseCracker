@@ -1,12 +1,14 @@
-.home-container{
+.home-container {
     height: 100vh;
     width: 100%;
     display: flex;
-    padding: .5rem;
+    padding: 0.5rem;
     align-items: center;
     box-sizing: border-box;
+    padding-bottom: 1rem;
 }
-.text-container{
+
+.text-container {
     width: 50%;
     height: 40rem;
     display: flex;
@@ -15,11 +17,13 @@
     align-items: center;
     text-align: center;
 }
-.text-title{
+
+.text-title {
     padding: 1rem;
     font-size: 4.5rem;
 }
-.home-description-container{
+
+.home-description-container {
     padding: 0.8rem;
     box-sizing: border-box;
     width: 100%;
@@ -27,14 +31,16 @@
     font-size: 1.7rem;
     margin: 0.4rem;
 }
-.button-container{
+
+.button-container {
     height: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.firstButton{
+
+.firstButton {
     box-sizing: border-box;
     border-radius: 20px;
     width: 12rem;
@@ -46,14 +52,25 @@
     outline: none;
     background-color: #DD761C;
     color: white;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
 }
-.firstButton input[type="button"]{
+
+.firstButton input[type="button"] {
     background-color: transparent;
     outline: none;
     color: white;
     border: none;
 }
-.secondButton{
+
+.firstButton.expanded {
+    width: 50rem;
+    position: absolute;
+    height: 40rem;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.secondButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,19 +83,22 @@
     color: black;
     border-radius: 20px;
 }
-.secondButton input[type="button"]{
+
+.secondButton input[type="button"] {
     outline: none;
     width: 8rem;
     border: none;
 }
-.image-container{
+
+.image-container {
     width: 50%;
     height: 40rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.image-container img{
+
+.image-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
