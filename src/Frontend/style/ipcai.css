@@ -1,20 +1,20 @@
-.ai-container {
+.ipc-ai-container {
     box-sizing: border-box;
     border-radius: 20px;
-    width: 12rem;
+    width: 16rem;
     height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     outline: none;
-    background-color: #3572EF;
-    color: white;
+    background-color: white ;
+    color: black;
     transition: 0.4s ease-in-out;
     cursor: pointer;
 }
 
-.ai-container.clicked {
+.ipc-ai-container.clicked {
     margin-bottom: 12rem;
     position: absolute;
     height: 40rem;
@@ -23,7 +23,7 @@
     z-index: 1;
 }
 
-.ai-chat-box {
+.ipc-ai-chat-box {
     height: 100%;
     width: 100%;
     border-radius: 20px;
@@ -31,7 +31,7 @@
     flex-direction: column;
 }
 
-.ai-chat-box-header {
+.ipc-ai-chat-box-header {
     box-sizing: border-box;
     padding: 0.8rem;
     height: 5%;
@@ -42,7 +42,7 @@
     border-radius: 20px 20px 0 0;
 }
 
-.ai-chat-box-screen {
+.ipc-ai-chat-box-screen {
     height: 88%;
     width: 100%;
     box-sizing: border-box;
@@ -54,13 +54,13 @@
     overflow-y: auto;
     padding: 1rem;
 }
-.ai-chat-box-screen::-webkit-scrollbar {
+.ipc-ai-chat-box-screen::-webkit-scrollbar {
     display: none;
   }
-.ai-chat-box-inputs {
-    background-color: white;
+.ipc-ai-chat-box-inputs {
+    background-color: #80C4E9;
     border-radius: 0 0 20px 20px;
-    height: 7%;
+    height: 10%;
     width: 100%;
     padding: 0.5rem;
     box-sizing: border-box;
@@ -70,7 +70,7 @@
     border-top: 1px solid #ddd;
 }
 
-.ai-chat-box-inputs input[type="text"] {
+.ipc-ai-chat-box-inputs input[type="text"] {
     width: 90%;
     padding: 0.4rem;
     height: 100%;
@@ -78,6 +78,7 @@
     outline: none;
     font-size: 1.1rem;
     border-radius: 20px;
+    background-color: #80C4E9;
 }
 
 

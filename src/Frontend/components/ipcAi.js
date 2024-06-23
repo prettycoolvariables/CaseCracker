@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { CiLocationArrow1 } from "react-icons/ci";
-import "../style/ai-container.css";
-import a10 from "../assets/A10.gif"
-const AiButton = () => {
+import "../style/ipcai.css";
+
+const IpcAi = () => {
     const [clicked, setClicked] = useState(false);
     const [currentInput, setCurrentInput] = useState('');
     const [chatMessages, setChatMessages] = useState([]);
@@ -18,7 +18,7 @@ const AiButton = () => {
         console.log("inside fetch");
         setLoading(true); // Set loading state to true before fetching
         try {
-            const response = await fetch('http://localhost:8080/ai', {
+            const response = await fetch('http://localhost:8080/ask_pdf', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -72,18 +72,18 @@ const AiButton = () => {
     }, [chatMessages]);
 
     return (
-        <div className={`ai-container ${clicked ? 'clicked' : ''}`}>
+        <div className={`ipc-ai-container ${clicked ? 'clicked' : ''}`}>
             {
                 !clicked ? (
-                    <div className="ai-button" onClick={() => setClicked(!clicked)}>
-                        Get a Free Consultation
+                    <div className="ipc-ai-button" onClick={() => setClicked(!clicked)}>
+                        chat with a professional lawyer AI
                     </div>
                 ) : (
-                    <div className="ai-chat-box">
-                        <div className="ai-chat-box-header">
+                    <div className="ipc-ai-chat-box">
+                        <div className="ipc-ai-chat-box-header">
                             <IoCloseSharp color="black" size={20} onClick={() => setClicked(!clicked)} />
                         </div>
-                        <div className="ai-chat-box-screen" ref={chatBoxScreenRef}>
+                        <div className="ipc-ai-chat-box-screen" ref={chatBoxScreenRef}>
                             {chatMessages.map((message, index) => (
                                 <div key={index} className={`${message.userinput ? 'user-message' : 'bot-message'}`}>
                                     <p>{message.text}</p>
@@ -92,18 +92,16 @@ const AiButton = () => {
                                             <p><strong>Sources:</strong></p>
                                             <ul>
                                                 {message.sources.map((source, idx) => (
-                                                    <li key={idx}>{source.source}: {source.page_content}</li>
+                                                      <li key={idx}>{source.source}: {source.page_content}</li>
                                                 ))}
                                             </ul>
                                         </div>
                                     )}
                                 </div>
                             ))}
-                            {loading && (
-                                <img src={a10} alt="Loading..." style={{ width: '20rem', height: '15rem' }} />
-                            ) } {/* Display loading message if loading state is true */}
+                            {loading && <p>Loading...</p>} {/* Display loading message if loading state is true */}
                         </div>
-                        <div className="ai-chat-box-inputs">
+                        <div className="ipc-ai-chat-box-inputs">
                             <input
                                 type="text"
                                 placeholder="Ask a Question.."
@@ -124,4 +122,4 @@ const AiButton = () => {
     );
 };
 
-export default AiButton;
+export default IpcAi;
