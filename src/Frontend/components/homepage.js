@@ -1,9 +1,12 @@
 import { MdArrowOutward } from "react-icons/md";
 import { CgInfo } from "react-icons/cg";
-import justice from "../assets/justice (2).png"
-import judge from "../assets/judge.png"
-import "../style/homepage.css"
+import judge from "../assets/judge.png";
+import "../style/homepage.css";
+import { useState } from "react";
+import AiButton from "./ai-container";
+
 const Home = () => {
+
     return ( 
         <div className="home-container">
             <div className="text-container">
@@ -14,10 +17,7 @@ const Home = () => {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam fugit ullam esse. Est at quam eveniet, rem voluptatum perferendis saepe explicabo sunt, vitae doloribus, unde ipsum obcaecati alias inventore sint.
                 </div>
                 <div className="button-container">
-                    <div className="firstButton">
-                        <input type="button" value="Get Free Consultation" />
-                        <MdArrowOutward size={15}/>
-                    </div>
+                    <AiButton/>
                     <div className="secondButton">
                         <input className="secondButton" type="button" value="Practise Area" />
                         <CgInfo size={25} opacity={0.7}/>
@@ -28,7 +28,7 @@ const Home = () => {
                 <img src={judge} alt="" />
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Home;

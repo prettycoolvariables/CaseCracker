@@ -1,3 +1,4 @@
+from flask_cors import CORS
 from flask import Flask, request
 from langchain_community.llms import Ollama
 from langchain_community.vectorstores import Chroma
@@ -7,8 +8,16 @@ from langchain_community.document_loaders import PDFPlumberLoader
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain.prompts import PromptTemplate
+from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain.chains.history_aware_retriever import create_history_aware_retriever
+
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+
+
+chat_history = []
 
 folder_path = "db"
 
@@ -67,12 +76,35 @@ def askPDFPost():
         },
     )
 
+    retriever_prompt = ChatPromptTemplate.from_messages(
+        [
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("human", "{input}"),
+            (
+                "human",
+                "Given the above conversation, generation a search query to lookup in order to get information relevant to the conversation",
+            ),
+        ]
+    )
+
+    history_aware_retriever = create_history_aware_retriever(
+        llm=cached_llm, retriever=retriever, prompt=retriever_prompt
+    )
+
     document_chain = create_stuff_documents_chain(cached_llm, raw_prompt)
-    chain = create_retrieval_chain(retriever, document_chain)
+    # chain = create_retrieval_chain(retriever, document_chain)
 
-    result = chain.invoke({"input": query})
+    retrieval_chain = create_retrieval_chain(
+        # retriever,
+        history_aware_retriever,
+        document_chain,
+    )
 
-    print(result)
+    # result = chain.invoke({"input": query})
+    result = retrieval_chain.invoke({"input": query})
+    print(result["answer"])
+    chat_history.append(HumanMessage(content=query))
+    chat_history.append(AIMessage(content=result["answer"]))
 
     sources = []
     for doc in result["context"]:
@@ -119,4 +151,4 @@ def start_app():
 
 
 if __name__ == "__main__":
-    start_app()
+    start_app() 
