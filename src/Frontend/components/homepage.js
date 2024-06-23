@@ -12,10 +12,13 @@ const Home = () => {
         <div className="home-container">
             <div className="text-container">
                 <div className="text-title">
-                    Having legal issues?        
+                    Have a case to crack?
                 </div>
                 <div className="home-description-container">
-                    Then better call CaseCracker.
+                    Then better call CaseCracker.we are professionals in solving cases and providing you with the best possible solution.
+                    this website provides a platform for you to ask questions and get answers from our AI.
+                    we have two AI's one is for general questions and the other is for legal questions.
+                    you can ask any question and we will provide you with the best possible solution.
                 </div>
                 <div className="button-container">
                     <AiButton/>
