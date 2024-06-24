@@ -5,8 +5,8 @@
 
 
 
-# Project Name
-Long Description about project. This project do that. This project is awesome...
+# CaseCracker
+Do you have trouble with legal things? Then better talk to CaseCracker! An ai bot that will answer all your questions and queries about legal issues, rules, petitions etc.
 ## Team members
 1. [Name 1](https://github.com/TH-Activities/saturday-hack-night-template)
 2. [Name 2](https://github.com/TH-Activities/saturday-hack-night-template)
