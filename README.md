@@ -5,91 +5,66 @@
 
 
 
-# Project Name
-Long Description about project. This project do that. This project is awesome...
+# CaseCracker
+Do you have trouble with legal things? Then better talk to CaseCracker! An ai bot that will answer all your questions and queries about legal issues, rules, petitions etc.
 ## Team members
-1. [Name 1](https://github.com/TH-Activities/saturday-hack-night-template)
-2. [Name 2](https://github.com/TH-Activities/saturday-hack-night-template)
+1. [Jebin Shaju](https://github.com/jebinshaju)
+2. [Sandeep Sreekumar](https://github.com/sandeepsreekumar4067)
+3. [Aleena Maria](https://github.com/prettycoolvariables)
 ## Link to product walkthrough
 [link to video](Link Here)
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+1. The UI consists of 2 options: a general chatbot which answers general queries about legal things and a more professionally trained chatbot that gives more in-depth replies consisting of IPC sections and laws.
+2. Choose the ai chatbot for your requirement and ask away.
 ## Libraries used
-Library Name - Version
+- Flask - Version 2.0.1
+- Flask-CORS - Version 3.0.10
+- langchain - Version 0.0.1
+- PDFPlumber - Version 0.5.28
+- transformers - Version 4.5.1
+- react-icons - Version 4.2.0
 ## How to configure
-Instructions for setting up project
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/prettycoolvariables/CaseCracker.git
+    cd CaseCracker
+    ```
+
+2. **Install Node.js dependencies**:
+    ```sh
+    cd frontend
+    npm install
+    ```
+
+3. **Install Python dependencies**:
+    ```sh
+    cd backend
+    pip install -r requirements.txt
+    ```
+
 ## How to Run
-Instructions for running
+### Running the Frontend
+1. **Start the React development server**:
+    ```sh
+    cd frontend
+    npm start
+    ```
+
+    This will start the frontend on `http://localhost:3000`.
+
+### Running the Backend
+1. **Start the Flask server**:
+    ```sh
+    cd backend
+    python app.py
+    ```
+
+    This will start the backend server on `http://localhost:8080`.
+
+### Interacting with the Chatbot
+1. **Open your browser** and navigate to `http://localhost:3000`.
+2. **Click the chat button** to open the chatbot interface.
+3. **Type your question** in the input field and press Enter or click the send button.
 
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
