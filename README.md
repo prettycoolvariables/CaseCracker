@@ -9,7 +9,7 @@
 Do you have trouble with legal things? Then better talk to CaseCracker! An ai bot that will answer all your questions and queries about legal issues, rules, petitions etc.
 ## Team members
 1. [Jebin Shaju](https://github.com/jebinshaju)
-2. [Sandeep Sreekumar]((https://github.com/sandeepsreekumar4067))
+2. [Sandeep Sreekumar](https://github.com/sandeepsreekumar4067)
 3. [Aleena Maria](https://github.com/prettycoolvariables)
 ## Link to product walkthrough
 [link to video](Link Here)
