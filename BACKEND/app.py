@@ -1,4 +1,4 @@
-
+from flask_cors import CORS
 from flask import Flask, request
 from langchain_community.llms import Ollama
 from langchain_community.vectorstores import Chroma
@@ -12,15 +12,12 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains.history_aware_retriever import create_history_aware_retriever
 
-
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 chat_history = []
-
 folder_path = "db"
-
 cached_llm = Ollama(model="llama3")
-
 embedding = FastEmbedEmbeddings()
 
 text_splitter = RecursiveCharacterTextSplitter(
@@ -28,15 +25,14 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 
 raw_prompt = PromptTemplate.from_template(
-    """ 
-    <s>[INST] You are a technical assistant good at searching docuemnts. If you do not have an answer from the provided information say so. [/INST] </s>
-    [INST] {input}
+    """
+    <s>[INST] You are an AI legal assistant, skilled in Indian law. Provide accurate legal advice or document lookup based on the query. If you do not have sufficient information to answer, please advise on the next steps or suggest seeking professional legal help. [/INST]</s>
+    [INST] Question: {input}
            Context: {context}
-           Answer:
+           Response:
     [/INST]
 """
 )
-
 
 @app.route("/ai", methods=["POST"])
 def aiPost():
@@ -52,7 +48,6 @@ def aiPost():
 
     response_answer = {"answer": response}
     return response_answer
-
 
 @app.route("/ask_pdf", methods=["POST"])
 def askPDFPost():
@@ -80,7 +75,7 @@ def askPDFPost():
             ("human", "{input}"),
             (
                 "human",
-                "Given the above conversation, generation a search query to lookup in order to get information relevant to the conversation",
+                "Given the above conversation, generate a search query to look up in order to get information relevant to the conversation",
             ),
         ]
     )
@@ -90,15 +85,12 @@ def askPDFPost():
     )
 
     document_chain = create_stuff_documents_chain(cached_llm, raw_prompt)
-    # chain = create_retrieval_chain(retriever, document_chain)
 
     retrieval_chain = create_retrieval_chain(
-        # retriever,
         history_aware_retriever,
         document_chain,
     )
 
-    # result = chain.invoke({"input": query})
     result = retrieval_chain.invoke({"input": query})
     print(result["answer"])
     chat_history.append(HumanMessage(content=query))
@@ -112,7 +104,6 @@ def askPDFPost():
 
     response_answer = {"answer": result["answer"], "sources": sources}
     return response_answer
-
 
 @app.route("/pdf", methods=["POST"])
 def pdfPost():
@@ -143,10 +134,8 @@ def pdfPost():
     }
     return response
 
-
 def start_app():
     app.run(host="0.0.0.0", port=8080, debug=True)
 
-
 if __name__ == "__main__":
-    start_app() 
+    start_app()

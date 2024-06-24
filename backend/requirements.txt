@@ -1,7 +1,0 @@
-Flask
-flask-cors
-python-dotenv
-PyPDF2
-langchain
-transformers
-faiss-cpu

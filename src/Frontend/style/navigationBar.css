@@ -38,9 +38,11 @@
     position: relative;
 }
 
-.nav {
+.nav , a{
     position: relative;
     cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 
 .nav::before {
