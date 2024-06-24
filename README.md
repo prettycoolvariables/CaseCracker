@@ -17,6 +17,16 @@
 
 ## Link to Product Walkthrough
 [link to video](Link Here)
+![image](https://github.com/prettycoolvariables/CaseCracker/assets/67820811/642f28d2-ad1c-4379-8bc3-762fffe5d8f9)
+![image](https://github.com/prettycoolvariables/CaseCracker/assets/67820811/c09c2d25-c568-4283-af87-884c20de7837)
+![image](https://github.com/prettycoolvariables/CaseCracker/assets/67820811/832ba0c8-a59c-44d8-a206-ef1ba6a7c91d)
+![image](https://github.com/prettycoolvariables/CaseCracker/assets/67820811/2115629e-8239-4fe1-97a1-8b95b12d1261)
+![image](https://github.com/prettycoolvariables/CaseCracker/assets/67820811/e6d0570e-77ee-4003-a3ae-a763d5930d03)
+
+
+
+
+
 
 ## How It Works
 1. **User Interface**: The UI has two options - a general chatbot for basic legal queries and a professional chatbot for more in-depth legal advice, including IPC sections and laws.
